@@ -1,0 +1,47 @@
+package ejercicios_set;
+
+public class VueloImplementacion implements Vuelo {
+
+	@Override
+	public String getDestino() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Double getPrecio() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setPrecio(Double precioNuevo) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Integer getNumeroPlazas() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer getNumeroPasajeros() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setNumeroPasajeros(Integer nuevoNumeroPasajeros) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public String getCodigo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

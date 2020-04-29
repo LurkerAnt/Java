@@ -1,0 +1,86 @@
+package ejercicio_collections;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class ListaValores {
+
+	private List <Integer>  listaValores;
+	
+	public ListaValores (){
+		listaValores= new ArrayList <Integer> ();
+		Roll2DieToAddToList50Times();
+	}
+	
+	
+	
+	
+	
+	
+	public void AddElement(Integer element) {
+		listaValores.add(element);
+	}
+	
+	public void OrderLowerToHigher() {
+		//esto lo ordena de menor a mayor.
+		Collections.sort(listaValores);
+	}
+
+	public void OrderHigherToLower() {
+		Collections.sort(listaValores);
+		//crear objeto comparador para que compare los elementos y los ponga en orden inverso.
+		Comparator<Integer> comparator=Collections.reverseOrder();
+		Collections.sort(listaValores, comparator);
+	}
+	
+	public int countTheTimesNumberAppears(int numberToCheck) {
+		int counter=0;
+		for (Integer integer : listaValores) {
+			if (integer==numberToCheck) {
+				counter++;
+			}
+		}
+		return counter;
+	}
+	
+	public ArrayList <Integer> getListOfElementsBetweenTwoNumbers(int number1, int number2){
+		ArrayList <Integer> listToReturn=new ArrayList<Integer>();
+		int extraNumber;
+		
+		if(number2>number1) {
+			extraNumber=number1;
+			number1=number2;
+			number2=extraNumber;
+		}
+		
+		if (diceOne>diceTwo) {
+			extraDice=diceOne;
+			diceOne=diceTwo;
+			diceTwo=extraDice;
+		}
+		
+		for (Integer integer : listToReturn) {
+			if (integer>=diceOne&&integer<=diceTwo) {
+				listToReturn.add(integer);
+			}
+		}
+		
+		return listToReturn;
+	}
+	
+	public Integer getCompleteAddedValueOfList() {
+		Integer acumulator=0;
+		for (Integer integer : listaValores) {
+			acumulator+=integer;
+		}
+		
+		return acumulator;
+	}
+	
+	
+	
+	
+	
+}

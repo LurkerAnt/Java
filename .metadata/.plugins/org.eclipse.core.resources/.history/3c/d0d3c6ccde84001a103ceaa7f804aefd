@@ -1,0 +1,60 @@
+package ejercicios_set;
+
+public class VueloImplementacion implements Vuelo {
+	private String destino;
+	private Double precio;
+	private Integer numeroDePlazas;
+	private Integer numeroDePasajeros;
+	private String codigoVuelo;
+	private Fecha fechaDeVuelo;
+	
+	public VueloImplementacion (String infoVuelo) {
+		infoVuelo=infoVuelo.replaceAll(" ","");
+		String [] infoVueloPartida=infoVuelo.split(",");
+		
+		this.destino=infoVueloPartida[0];
+		this.precio=Double.parseDouble(infoVueloPartida[1]);
+		this.numeroDePlazas=Integer.parseInt(infoVueloPartida[2]);
+		this.numeroDePasajeros=Integer.parseInt(infoVueloPartida[3]);
+		this.codigoVuelo=infoVueloPartida[4];
+		this.fechaDeVuelo= new Fecha (Integer.parseInt(infoVueloPartida[5]),Integer.parseInt(infoVueloPartida[6]),Integer.parseInt(infoVueloPartida[7]));
+	}
+	
+	
+	public String getDestino() {
+		return this.destino;
+	}
+
+
+	public Double getPrecio() {
+		return this.precio;
+	}
+
+
+	public void setPrecio(Double precioNuevo) {
+		this.precio=precioNuevo;
+	}
+
+
+	public Integer getNumeroPlazas() {
+		return this.numeroDePlazas;
+	}
+
+
+	public Integer getNumeroPasajeros() {
+		return this.numeroDePasajeros;
+	}
+
+	public void setNumeroPasajeros(Integer nuevoNumeroPasajeros) {
+		this.numeroDePasajeros=nuevoNumeroPasajeros;
+	}
+
+	public String getCodigo() {
+		return this.codigoVuelo;
+	}
+	
+	public Fecha getFechaVuelo() {
+		return this.fechaDeVuelo;
+	}
+
+}

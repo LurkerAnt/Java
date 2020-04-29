@@ -1,0 +1,23 @@
+package ejercicios_set;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Locale;
+
+public class Fecha implements Comparable <Fecha> {
+	
+	private GregorianCalendar calendar;
+	
+	public Fecha (Integer day, Integer month, Integer year) {
+		if (!esFechaValida(day,month,year)) {
+			throw new IllegalArgumentException("Fecha Invalida.");
+		}
+		//los month solo van de 0 a 11
+		this.calendar= new GregorianCalendar(year,month-1,day);
+	}
+	
+	public Integer getDiaSemana() {
+		return calendar.get(Calendar.DAY_OF_MONTH);
+	}
+	
+}

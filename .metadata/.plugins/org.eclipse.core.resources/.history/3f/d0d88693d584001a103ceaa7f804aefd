@@ -1,0 +1,10 @@
+package ejercicios_set;
+
+public class Vuelo {
+
+	private String destino;
+	private Double precio;
+	private Integer numeroDePlazas;
+	private Integer numeroDePasajeros;
+	
+}

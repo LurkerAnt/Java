@@ -1,0 +1,109 @@
+package ejercicios_set;
+
+public class VueloImplementacion implements Vuelo {
+	private String destino;
+	private Double precio;
+	private Integer numeroDePlazas;// debe ser positivo
+	private Integer numeroDePasajeros;// debe ser positivo y menor de numPlazas
+	private String codigoVuelo;
+	private Fecha fechaDeVuelo;// posterior al año 2000
+	
+
+	
+	
+	public VueloImplementacion(String destinoNuevo, Double precioNuevo, Integer numeroDePlazasNuevo, Integer numeroDePasajerosNuevo,
+			String codigoVueloNuevo, Fecha fechaDeVueloNuevo) {
+
+		//comprobar que los argumentos son validos, con excepciones no paras la ejecución del programa.
+		//si son objeto o wrappers acostumbrate a utilizar equals o compareTo
+		//si el numero plazas es menor que 0 
+		if (numeroDePlazasNuevo.compareTo(0)<0) {
+			throw new IllegalArgumentException("Numero de plazas no valido");
+		}
+		//si los pasajeros son menores que 0 o si 
+		if (numeroDePasajerosNuevo.compareTo(0)<0||numeroDePasajerosNuevo.compareTo(numeroDePlazasNuevo)>0) {
+			throw new IllegalArgumentException("Numero de pasajeros no valido");
+		}
+		
+		if (fechaDeVueloNuevo.getYear()>2000) {
+			throw new IllegalArgumentException("Año no valido");
+		}
+		
+		this.destino = destinoNuevo;
+		this.precio = precioNuevo;
+		this.numeroDePlazas = numeroDePlazasNuevo;
+		this.numeroDePasajeros = numeroDePasajerosNuevo;
+		this.codigoVuelo = codigoVueloNuevo;
+		this.fechaDeVuelo = fechaDeVueloNuevo;
+	}
+
+
+	public VueloImplementacion (String infoVuelo) {
+		//quita los espacios.
+		infoVuelo=infoVuelo.replaceAll(" ","");
+		//parte String en array
+		String [] infoVueloPartida=infoVuelo.split(",");
+		//inicializa
+		this.destino=infoVueloPartida[0];
+		this.precio=Double.parseDouble(infoVueloPartida[1]);
+		this.numeroDePlazas=Integer.parseInt(infoVueloPartida[2]);
+		this.numeroDePasajeros=Integer.parseInt(infoVueloPartida[3]);
+		this.codigoVuelo=infoVueloPartida[4];
+		this.fechaDeVuelo= new Fecha (Integer.parseInt(infoVueloPartida[5]),Integer.parseInt(infoVueloPartida[6]),Integer.parseInt(infoVueloPartida[7]));
+	}
+	
+	
+	public String getDestino() {
+		return this.destino;
+	}
+
+
+	public Double getPrecio() {
+		return this.precio;
+	}
+
+
+	public void setPrecio(Double precioNuevo) {
+		this.precio=precioNuevo;
+	}
+
+
+	public Integer getNumeroPlazas() {
+		return this.numeroDePlazas;
+	}
+
+
+	public Integer getNumeroPasajeros() {
+		return this.numeroDePasajeros;
+	}
+
+	public void setNumeroPasajeros(Integer nuevoNumeroPasajeros) {
+		this.numeroDePasajeros=nuevoNumeroPasajeros;
+	}
+
+	public String getCodigo() {
+		return this.codigoVuelo;
+	}
+	
+	public Fecha getFechaVuelo() {
+		return this.fechaDeVuelo;
+	}
+	
+	//No tenía ni idea de como comparar por mas de un valor asíque esto esta sacado del video de La programacion No Es Un Arte
+	
+	public String toString() {
+		return "("+codigoVuelo+"-"+fechaDeVuelo+")";
+	}
+
+	public boolean equals (Object o) {
+		boolean resultado=false;
+		
+		if (o instanceof Vuelo) {
+			Vuelo v = (Vuelo) o;
+			
+			resultado= v.getCodigo().equals(this.getCodigo())&& v.getFechaVuelo().equals(this.getFechaVuelo());
+		}
+		
+		return resultado;
+	}
+}

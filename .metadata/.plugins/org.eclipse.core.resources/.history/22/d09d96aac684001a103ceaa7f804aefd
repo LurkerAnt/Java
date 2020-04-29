@@ -1,0 +1,68 @@
+package ejercicio_collections;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class ListaValores {
+
+	private List <Integer>  listaValores;
+	
+	public ListaValores (){
+		listaValores= new ArrayList <Integer> ();
+		Roll2DieToAddToList50Times();
+	}
+	
+	public void Roll2DieToAddToList50Times () {
+		for(int i =0; i<50;i++) {
+			listaValores.add(RollDice());
+			listaValores.add(RollDice());
+		}
+	}
+	
+	
+	public int RollDice() {
+		return (int)(Math.random() * 6) + 1;
+	}
+	
+	public void AddElement(Integer element) {
+		listaValores.add(element);
+	}
+	
+	public void OrderLowerToHigher() {
+		//esto lo ordena de menor a mayor.
+		Collections.sort(listaValores);
+	}
+
+	public void OrderHigherToLower() {
+		Collections.sort(listaValores);
+		//crear objeto comparador para que compare los elementos y los ponga en orden inverso.
+		Comparator<Integer> comparator=Collections.reverseOrder();
+		Collections.sort(listaValores, comparator);
+	}
+	
+	public int countTheTimesNumberAppears(int numberToCheck) {
+		int counter=0;
+		for (Integer integer : listaValores) {
+			if (integer==numberToCheck) {
+				counter++;
+			}
+		}
+		return counter;
+	}
+	
+	public ArrayList <Integer> getListOfElementsBetweenTwoDiceRolls(){
+		List <Integer> listToReturn=new ArrayList<Integer>();
+		int diceOne=RollDice();
+		int diceTwo=RollDice();
+		for (Integer integer : listToReturn) {
+			if (integer<=)
+		}
+		
+		return listToReturn;
+	}
+	
+	
+	
+}

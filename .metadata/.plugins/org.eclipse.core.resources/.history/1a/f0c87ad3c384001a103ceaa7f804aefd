@@ -1,0 +1,23 @@
+package ejercicio_collections;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListaValores {
+
+	private List <Integer>  listaValores;
+	
+	ListaValores (){
+		listaValores= new ArrayList <Integer> ();
+	}
+	
+	public void Roll2Die (int numberOfRolls) {
+		listaValores.add(RollDice());
+		listaValores.add(RollDice());
+	}
+	
+	
+	public int RollDice() {
+		return (int)(Math.random() * 6) + 1;
+	}
+}
