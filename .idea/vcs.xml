@@ -2,10 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-<<<<<<< Updated upstream
     <mapping directory="$PROJECT_DIR$/ejercicicos_repaso_general_java" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ejercicios_java" vcs="Git" />
-=======
->>>>>>> Stashed changes
   </component>
 </project>
