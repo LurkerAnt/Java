@@ -1,0 +1,7 @@
+1, Zara, C/de Java 666, Getafe, Madrid, 1234
+2, Zara Home, C/Sistemas 33, Getafe, Madrid, 28906
+3, Zara Kids, C/ Higueral, Fuenlabrada, Madrid, 29044
+4, Zara Hombre, C/ Carretas, Molins de Mar, Barcelona, 98765
+5, Zara, C/ Calles, Móstoles, Madrid, 29041
+6, Zara Kids, C/ Caballero andante, Móstoles, Madrid, 29041
+7, Zara Hombre, C/ Caballero andante, Móstoles, Madrid, 29041

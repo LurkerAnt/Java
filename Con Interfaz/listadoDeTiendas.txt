@@ -1,0 +1,4 @@
+1, Zara, Calle de Java 666, Getafe, Madrid, 1234
+2, Zara Home, Calle Sistemas 33, Getafe, Madrid, 28906
+3, zara, direcc, pobla, prov, 1
+4, zaraaaaaa, direcc, pobla, prov, 1

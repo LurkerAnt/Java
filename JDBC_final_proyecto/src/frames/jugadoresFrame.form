@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="frames.jugadoresFrame">
+  <grid id="27dc6" binding="Jugadores" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <toolbar id="95236">
+        <constraints border-constraint="North"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="9c000" class="javax.swing.JButton" binding="insertButton" default-binding="true">
+            <constraints/>
+            <properties>
+              <text value="Insert"/>
+            </properties>
+          </component>
+        </children>
+      </toolbar>
+      <component id="28b24" class="javax.swing.JTable" binding="table1" default-binding="true">
+        <constraints border-constraint="Center"/>
+        <properties/>
+      </component>
+    </children>
+  </grid>
+</form>

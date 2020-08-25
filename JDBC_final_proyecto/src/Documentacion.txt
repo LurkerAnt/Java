@@ -1,0 +1,3 @@
+Has aprendido a utilizar más o menos los set statements y las conexiones a BBDD
+Aprieta más en estas cosas y tienes 3 días, lo de la interfaz gráfica se necesita tiempo, como no has tenído aprietale de cara al final,
+trabaja mas files y conexiones a db y aprieta los machos.
